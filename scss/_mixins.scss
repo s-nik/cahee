@@ -1,0 +1,41 @@
+@mixin tr ($time:.4s) {
+	transition: all $time linear;
+}
+
+@mixin myPos($top: 50%, $left: 50%, $tx: -50%, $ty: -50%) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	transform: translate($tx, $ty);
+}
+
+@mixin flex($direction: row, $wrap: nowrap, $align: center, $content: center) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	align-items: $align;
+	justify-content: $content;
+}
+
+@mixin align($mh:3em) {
+		text-align: center;
+		max-height: $mh;
+		overflow: hidden;
+}
+
+@mixin td {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin dl {
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+@mixin bg {
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+}
